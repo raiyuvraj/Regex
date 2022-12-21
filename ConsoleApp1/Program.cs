@@ -8,16 +8,16 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter Last Name: ");
+        Console.WriteLine("Enter Mobile no. : ");
         var data = Console.ReadLine();
-        string pattern = "^[A-Z]{1}[a-z]{2,}$";
+        string pattern = "^[+][][0-9]{1,3}[ ][6-9]{1}[0-9]{9}$";
 
         Regex regex = new Regex(pattern);
 
         if (regex.IsMatch(data))
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("It is Valid name");
+            Console.WriteLine("It is Valid number");
             Console.ResetColor();
         }
         else
